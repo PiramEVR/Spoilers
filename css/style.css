@@ -1,0 +1,164 @@
+body {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color: #012B34;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.title {
+    border-bottom: 1px solid #E6E6E6;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    margin: 0;
+    padding: 100px 0 80px;
+}
+
+.spoilers {
+    margin: 0;
+}
+
+.spoiler {
+    margin: 0;
+    padding: 30px 0;
+    border-bottom: 1px solid #E6E6E6;
+    list-style: none;
+}
+
+.spoiler__title {
+    font-size: 36px;
+    line-height: 120%;
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    background-color: transparent;
+    display: block;
+    position: relative;
+    text-align: left;
+}
+
+.spoiler__title::before,
+.spoiler__title::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #02818A;
+    transition: transform 0.3s ease 0s;
+}
+
+.spoiler__title::after {
+    transform: rotate(90deg);
+}
+
+.spoiler__title.active::before {
+    transform: rotate(-45deg);
+}
+
+.spoiler__title.active::after {
+    transform: rotate(45deg);
+}
+
+.spoiler__title.active {
+    color: #02818A;
+}
+
+.spoiler__text {
+    display: none;
+    width: 70%;
+    font-size: 20px;
+    line-height: 150%;
+    color: #000402;
+    opacity: 0.8;
+}
+
+.spoiler__title.active ~ .spoiler__text {
+    display: block;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1200px;
+    }
+    .title {
+        font-size: 48px;
+        padding: 80px 0 60px;
+    }
+    .spoiler {
+        padding: 20px 0;
+    }
+    .spoiler__title {
+        font-size: 27px;
+    }
+    .spoiler__text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1066px;
+    }
+    .title {
+        font-size: 42px;
+        padding: 70px 0 56px;
+    }
+    .spoiler {
+        padding: 20px 0;
+    }
+    .spoiler__title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 688px;
+    }
+    .title {
+        font-size: 42px;
+        padding: 60px 0 50px;
+    }
+    .spoiler {
+        padding: 24px 0;
+    }
+    .spoiler__title {
+        font-size: 27px;
+    }
+    .spoiler__text {
+        width: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        max-width: 327px;
+    }
+    .title {
+        font-size: 30px;
+        padding: 50px 0 40px;
+    }
+    .spoiler {
+        padding: 20px 0;
+    }
+    .spoiler__title {
+        font-size: 24px;
+    }
+    .spoiler__text {
+        width: 90%;
+    }
+}
